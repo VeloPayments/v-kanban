@@ -233,4 +233,13 @@ function updateBoard() {
 
     //2020-08-05 - start progress on pubfileReader
     promote(pubfileReader, releaseDemo1Selected, releaseDemo1Progress);
+
+    //2020-08-05 - add descriptive errors task to Demo 1 release tracker.
+    var protocolDescriptiveErrors =
+        createStory(
+            "Descriptive protocol errors for Java API",
+            "Ensure that handshake and authentication errors throw " +
+            "descriptive exceptions, so the user can figure out why " +
+            "handshakes failed.");
+    releaseDemo1Selected.appendChild(protocolDescriptiveErrors);
 }
