@@ -148,7 +148,7 @@ function updateBoard() {
 
     var article2Demo1 =
         createStory(
-            "Article 1: Tutorial 1",
+            "Article 2: Tutorial 1",
             "Tutorial for the first demo.");
     backlog.appendChild(article2Demo1);
 
