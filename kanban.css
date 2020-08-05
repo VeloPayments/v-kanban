@@ -1,0 +1,36 @@
+.board {
+    display: flex;
+    border: 3px solid #cccccc;
+}
+
+.column {
+    flex: 1;
+    border: 2px solid #000000;
+    margin: 12px;
+    background-color: #deb887;
+}
+
+.column > h2 {
+    text-align: center;
+}
+
+.story {
+    width=100%;
+    margin: 25px;
+    padding: 25px;
+    border: 2px solid #000000;
+    background-color: #ffffff;
+    border-radius: 25px;
+}
+
+.release {
+    width=100%;
+    margin: 25px;
+    padding: 5px;
+    border: 2px solid #000000;
+    background-color: #cfeefa;
+}
+
+.release > h3 {
+    text-align: center
+}
