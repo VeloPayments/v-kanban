@@ -180,15 +180,17 @@ function updateBoard() {
     promote(article2Demo1, backlog, releaseDemo1Selected);
 
     //Create Demo 2 release.
-    var releaseDemo2Backlog = createRelease("0.4.1", "Demo 2");
-    backlog.appendChild(releaseDemo2Backlog);
+    var relaseDemo2Selected = createRelease("0.4.1", "Demo 2");
+    backlog.appendChild(relaseDemo2Selected);
+    var relaseDemo2Progress = createRelease("0.4.1", "Demo 2");
+    var relaseDemo2Done = createRelease("0.4.1", "Demo 2");
 
     //Stories for Demo 2
-    promote(vcblockchainProtocol, backlog, releaseDemo2Backlog);
-    promote(forwardSecrecy, backlog, releaseDemo2Backlog);
-    promote(notificationServiceShell, backlog, releaseDemo2Backlog);
+    promote(vcblockchainProtocol, backlog, relaseDemo2Selected);
+    promote(forwardSecrecy, backlog, relaseDemo2Selected);
+    promote(notificationServiceShell, backlog, relaseDemo2Selected);
     promote(
-        blockNotificationRegNotificationService, backlog, releaseDemo2Backlog);
-    promote(blockNotificationRegProtocolService, backlog, releaseDemo2Backlog);
-    promote(blockNotificationDataService, backlog, releaseDemo2Backlog);
+        blockNotificationRegNotificationService, backlog, relaseDemo2Selected);
+    promote(blockNotificationRegProtocolService, backlog, relaseDemo2Selected);
+    promote(blockNotificationDataService, backlog, relaseDemo2Selected);
 }
