@@ -230,4 +230,7 @@ function updateBoard() {
             "electrically isolated way to drive the relay from RPi's limited " +
             "GPIO pins.");
     releaseDemo2Selected.appendChild(demo2DriverBoard);
+
+    //2020-08-05 - start progress on pubfileReader
+    promote(pubfileReader, releaseDemo1Selected, releaseDemo1Progress);
 }
