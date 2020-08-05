@@ -180,17 +180,54 @@ function updateBoard() {
     promote(article2Demo1, backlog, releaseDemo1Selected);
 
     //Create Demo 2 release.
-    var relaseDemo2Selected = createRelease("0.4.1", "Demo 2");
-    backlog.appendChild(relaseDemo2Selected);
+    var releaseDemo2Selected = createRelease("0.4.1", "Demo 2");
+    backlog.appendChild(releaseDemo2Selected);
     var relaseDemo2Progress = createRelease("0.4.1", "Demo 2");
     var relaseDemo2Done = createRelease("0.4.1", "Demo 2");
 
     //Stories for Demo 2
-    promote(vcblockchainProtocol, backlog, relaseDemo2Selected);
-    promote(forwardSecrecy, backlog, relaseDemo2Selected);
-    promote(notificationServiceShell, backlog, relaseDemo2Selected);
+    promote(vcblockchainProtocol, backlog, releaseDemo2Selected);
+    promote(forwardSecrecy, backlog, releaseDemo2Selected);
+    promote(notificationServiceShell, backlog, releaseDemo2Selected);
     promote(
-        blockNotificationRegNotificationService, backlog, relaseDemo2Selected);
-    promote(blockNotificationRegProtocolService, backlog, relaseDemo2Selected);
-    promote(blockNotificationDataService, backlog, relaseDemo2Selected);
+        blockNotificationRegNotificationService, backlog, releaseDemo2Selected);
+    promote(blockNotificationRegProtocolService, backlog, releaseDemo2Selected);
+    promote(blockNotificationDataService, backlog, releaseDemo2Selected);
+
+    //More stories for Demo 2
+    var demo2Artifacts =
+        createStory(
+            "Define artifacts for Demo 2",
+            "We need the artifacts for a device and the device state, " +
+            "along with the transaction types.");
+    releaseDemo2Selected.appendChild(demo2Artifacts);
+    var templateParser =
+        createStory(
+            "Template format parser for vctool",
+            "Allow certificates to be described via a template.");
+    releaseDemo2Selected.appendChild(templateParser);
+    var createCertificate =
+        createStory(
+            "Create certificate by template in vctool",
+            "Simple checked method for creating a certificate defined by " +
+            "a template in vctool.");
+    releaseDemo2Selected.appendChild(createCertificate);
+    var vctoolSubmit =
+        createStory(
+            "Submit transactions with vctool",
+            "Submit transactions to a blockchain agent using vctool.");
+    releaseDemo2Selected.appendChild(vctoolSubmit);
+    var demo2client =
+        createStory(
+            "Create a client for demo 2",
+            "This client runs on NetBSD and toggles a GPIO pin based on " +
+            "device state transactions submitted to the blockchain.");
+    releaseDemo2Selected.appendChild(demo2client);
+    var demo2DriverBoard =
+        createStory(
+            "Create a driver board for demo 2",
+            "The driver board powers the RPi and relay. It provides an " +
+            "electrically isolated way to drive the relay from RPi's limited " +
+            "GPIO pins.");
+    releaseDemo2Selected.appendChild(demo2DriverBoard);
 }
