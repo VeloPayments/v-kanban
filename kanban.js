@@ -242,4 +242,84 @@ function updateBoard() {
             "descriptive exceptions, so the user can figure out why " +
             "handshakes failed.");
     releaseDemo1Selected.appendChild(protocolDescriptiveErrors);
+
+    //2020-08-06 - add stories around log service for agentd
+    //Create Maintenance 1 release
+    var releaseMaintenance1Selected = createRelease("0.4.2", "Maintenance 1");
+    backlog.appendChild(releaseMaintenance1Selected);
+    var releaseMaintenance1Progress = createRelease("0.4.2", "Maintenance 1");
+    var releaseMaintenance1Done = createRelease("0.4.2", "Maintenance 1");
+
+    var logServiceCreation =
+        createStory(
+            "Create log service for agentd",
+            "Enables logging so there is some ops visibility of agentd's " +
+            "behavior.");
+    releaseMaintenance1Selected.appendChild(logServiceCreation);
+    var supervisorAssignsLogServiceToRandomServices =
+        createStory(
+            "Supervisor Assigns Log Service to Random Services",
+            "The random services have a live logger service socket.");
+    releaseMaintenance1Selected.appendChild(
+        supervisorAssignsLogServiceToRandomServices);
+    var randomServiceLogging =
+        createStory(
+            "Enable logging in the random service",
+            "The random service logs to the log service.");
+    releaseMaintenance1Selected.appendChild(randomServiceLogging);
+    var supervisorAssignsLogServiceToListenerService =
+        createStory(
+            "Supervisor Assigns Log Service to Listener Service",
+            "The listener service has a live logger service socket.");
+    releaseMaintenance1Selected.appendChild(
+        supervisorAssignsLogServiceToListenerService);
+    var listenerServiceLogging =
+        createStory(
+            "Enable logging in the listener service",
+            "The listener service logs to the log service.");
+    releaseMaintenance1Selected.appendChild(listenerServiceLogging);
+    var supervisorAssignsLogServiceToDataServices =
+        createStory(
+            "Supervisor Assigns Log Service to Data Services",
+            "The data services have a live logger service socket.");
+    releaseMaintenance1Selected.appendChild(
+        supervisorAssignsLogServiceToDataServices);
+    var dataServiceLogging =
+        createStory(
+            "Enable logging in the data service",
+            "The data service logs to the log service.");
+    releaseMaintenance1Selected.appendChild(dataServiceLogging);
+    var supervisorAssignsLogServiceToProtocolService =
+        createStory(
+            "Supervisor Assigns Log Service to Protocol Service",
+            "The protocol service has a live logger service socket.");
+    releaseMaintenance1Selected.appendChild(
+        supervisorAssignsLogServiceToProtocolService);
+    var protocolServiceLogging =
+        createStory(
+            "Enable logging in the protocol service",
+            "The protocol service logs to the log service.");
+    releaseMaintenance1Selected.appendChild(protocolServiceLogging);
+    var supervisorAssignsLogServiceToAuthService =
+        createStory(
+            "Supervisor Assigns Log Service to Auth Service",
+            "The auth service has a live logger service socket.");
+    releaseMaintenance1Selected.appendChild(
+        supervisorAssignsLogServiceToAuthService);
+    var authServiceLogging =
+        createStory(
+            "Enable logging in the auth service",
+            "The auth service logs to the log service.");
+    releaseMaintenance1Selected.appendChild(authServiceLogging);
+    var supervisorAssignsLogServiceToCanonizationService =
+        createStory(
+            "Supervisor Assigns Log Service to Canonization Service",
+            "The canonization service has a live logger service socket.");
+    releaseMaintenance1Selected.appendChild(
+        supervisorAssignsLogServiceToCanonizationService);
+    var canonizationServiceLogging =
+        createStory(
+            "Enable logging in the canonization service",
+            "The canonization service logs to the log service.");
+    releaseMaintenance1Selected.appendChild(canonizationServiceLogging);
 }
