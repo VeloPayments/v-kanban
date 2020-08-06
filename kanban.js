@@ -322,4 +322,9 @@ function updateBoard() {
             "Enable logging in the canonization service",
             "The canonization service logs to the log service.");
     releaseMaintenance1Selected.appendChild(canonizationServiceLogging);
+
+    //2020-08-06 - promote pubfileReader story to Done.
+    //           - start progress on privateKeyReader story.
+    promote(pubfileReader, releaseDemo1Progress, releaseDemo1Done);
+    promote(privateKeyReader, releaseDemo1Selected, releaseDemo1Progress);
 }
