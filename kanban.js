@@ -327,4 +327,10 @@ function updateBoard() {
     //           - start progress on privateKeyReader story.
     promote(pubfileReader, releaseDemo1Progress, releaseDemo1Done);
     promote(privateKeyReader, releaseDemo1Selected, releaseDemo1Progress);
+
+    //2020-08-07 - promote privateKeyReader story to Done.
+    //           - start progress on improvedProtocolKeyImport story.
+    promote(privateKeyReader, releaseDemo1Progress, releaseDemo1Done);
+    promote(
+        improvedProtocolKeyImport, releaseDemo1Selected, releaseDemo1Progress);
 }
