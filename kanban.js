@@ -333,4 +333,10 @@ function updateBoard() {
     promote(privateKeyReader, releaseDemo1Progress, releaseDemo1Done);
     promote(
         improvedProtocolKeyImport, releaseDemo1Selected, releaseDemo1Progress);
+
+    //2020-08-07 - promote improvedProtocolKeyImport story to Done.
+    //           - start progress on canonizationKeyControlAPI story.
+    promote(improvedProtocolKeyImport, releaseDemo1Progress, releaseDemo1Done);
+    promote(
+        canonizationKeyControlAPI, releaseDemo1Selected, releaseDemo1Progress);
 }
