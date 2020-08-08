@@ -364,4 +364,10 @@ function updateBoard() {
             "Clean up ups_private_key struct",
             "Remove unused members.");
     releaseDemo1Selected.appendChild(upsPrivateKeyStructCleanup);
+
+    //2020-08-08 - promote canonizationKeyControlAPI story to Done.
+    //           - start progress on upsPrivateKeyStructCleanup story.
+    promote(canonizationKeyControlAPI, releaseDemo1Progress, releaseDemo1Done);
+    promote(
+        upsPrivateKeyStructCleanup, releaseDemo1Selected, releaseDemo1Progress);
 }
