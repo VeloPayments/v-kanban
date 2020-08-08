@@ -370,4 +370,11 @@ function updateBoard() {
     promote(canonizationKeyControlAPI, releaseDemo1Progress, releaseDemo1Done);
     promote(
         upsPrivateKeyStructCleanup, releaseDemo1Selected, releaseDemo1Progress);
+
+    //2020-08-08 - promote upsPrivateKeyStructCleanup story to Done.
+    //           - start progress on canonizationServiceBugfixConfigureError.
+    promote(upsPrivateKeyStructCleanup, releaseDemo1Progress, releaseDemo1Done);
+    promote(
+        canonizationServiceBugfixConfigureError, releaseDemo1Selected,
+        releaseDemo1Progress);
 }
