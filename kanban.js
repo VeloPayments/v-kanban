@@ -377,4 +377,13 @@ function updateBoard() {
     promote(
         canonizationServiceBugfixConfigureError, releaseDemo1Selected,
         releaseDemo1Progress);
+
+    //2020-08-08 - promote canonizationServiceBugfixConfigureError to Done.
+    //           - start progress on improvedCanonizationKeyImport.
+    promote(
+        canonizationServiceBugfixConfigureError, releaseDemo1Progress,
+        releaseDemo1Done);
+    promote(
+        improvedCanonizationKeyImport, releaseDemo1Selected,
+        releaseDemo1Progress);
 }
