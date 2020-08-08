@@ -349,4 +349,12 @@ function updateBoard() {
             "<p>This story requires that the supervisor sets the private key " +
             "before it can be started.</p>");
     releaseDemo1Selected.appendChild(canonizationServiceRequirePrivateKey);
+
+    //2020-08-08 - add bug fix for canonization service configure.
+    var canonizationServiceBugfixConfigureError =
+        createStory(
+            "BUGFIX - Canonization Service Configure control returns wrong " +
+            "method code",
+            "The Configure Control API method returns the wrong method code.");
+    releaseDemo1Selected.appendChild(canonizationServiceBugfixConfigureError);
 }
