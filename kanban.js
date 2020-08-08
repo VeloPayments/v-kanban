@@ -339,4 +339,14 @@ function updateBoard() {
     promote(improvedProtocolKeyImport, releaseDemo1Progress, releaseDemo1Done);
     promote(
         canonizationKeyControlAPI, releaseDemo1Selected, releaseDemo1Progress);
+
+    //2020-08-08 - add story for canonization service requirements
+    var canonizationServiceRequirePrivateKey =
+        createStory(
+            "Canonization Service Requires Private Key to Start",
+            "<p>Add check to canonization service to ensure that a private " +
+            "key has been set before it can successfully start.</p>" +
+            "<p>This story requires that the supervisor sets the private key " +
+            "before it can be started.</p>");
+    releaseDemo1Selected.appendChild(canonizationServiceRequirePrivateKey);
 }
