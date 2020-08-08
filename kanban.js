@@ -357,4 +357,11 @@ function updateBoard() {
             "method code",
             "The Configure Control API method returns the wrong method code.");
     releaseDemo1Selected.appendChild(canonizationServiceBugfixConfigureError);
+
+    //2020-08-08 - clean up ups_private_key struct.
+    var upsPrivateKeyStructCleanup =
+        createStory(
+            "Clean up ups_private_key struct",
+            "Remove unused members.");
+    releaseDemo1Selected.appendChild(upsPrivateKeyStructCleanup);
 }
