@@ -394,4 +394,12 @@ function updateBoard() {
     promote(
         canonizationServiceRequirePrivateKey, releaseDemo1Selected,
         releaseDemo1Progress);
+
+    //2020-08-08 - promote canonizationServiceRequirePrivateKey to Done.
+    //           - start progress on canonizationBlockSigning.
+    promote(
+        canonizationServiceRequirePrivateKey, releaseDemo1Progress,
+        releaseDemo1Done);
+    promote(
+        canonizationBlockSigning, releaseDemo1Selected, releaseDemo1Progress);
 }
