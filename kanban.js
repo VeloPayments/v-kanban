@@ -402,4 +402,11 @@ function updateBoard() {
         releaseDemo1Done);
     promote(
         canonizationBlockSigning, releaseDemo1Selected, releaseDemo1Progress);
+
+    //2020-08-10 - promote canonizationBlockSigning to Done.
+    //           - start progress on protocolDescriptiveErrors.
+    promote(
+        canonizationBlockSigning, releaseDemo1Progress, releaseDemo1Done);
+    promote(
+        protocolDescriptiveErrors, releaseDemo1Selected, releaseDemo1Progress);
 }
