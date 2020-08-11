@@ -409,4 +409,15 @@ function updateBoard() {
         canonizationBlockSigning, releaseDemo1Progress, releaseDemo1Done);
     promote(
         protocolDescriptiveErrors, releaseDemo1Selected, releaseDemo1Progress);
+
+    //2020-08-11 - promote protocolDescriptiveErrors to Done.
+    //           - start progress on demo1Versioning.
+    promote(
+        protocolDescriptiveErrors, releaseDemo1Progress, releaseDemo1Done);
+    promote(
+        demo1Versioning, releaseDemo1Selected, releaseDemo1Progress);
+
+    //2020-08-11 - add demo 2 tasks to selected for development.
+    promote(
+        releaseDemo2Selected, backlog, selected);
 }
