@@ -420,4 +420,12 @@ function updateBoard() {
     //2020-08-11 - add demo 2 tasks to selected for development.
     promote(
         releaseDemo2Selected, backlog, selected);
+
+    //2020-08-11 - add MITM mitigation in Java client story.
+    var javaClientMITM =
+        createStory(
+            "MITM mitigation in Java client",
+            "Java client does not check agentd public key, leading to " +
+            "possible MITM attack.  Add public key check.");
+    releaseDemo1Progress.appendChild(javaClientMITM);
 }
