@@ -428,4 +428,7 @@ function updateBoard() {
             "Java client does not check agentd public key, leading to " +
             "possible MITM attack.  Add public key check.");
     releaseDemo1Progress.appendChild(javaClientMITM);
+
+    //2020-08-11 - promote javaClientMITM to Done
+    promote(javaClientMITM, releaseDemo1Progress, releaseDemo1Done);
 }
