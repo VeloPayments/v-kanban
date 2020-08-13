@@ -438,6 +438,5 @@ function updateBoard() {
         "Lots of stuff has changed in the WASM and vcblockchain world since " +
         " we wrote the original bindings, they needed rewriting and cleaning" +
 		" up. This is the main tracking task for this");        
-    releaseDemo1Progress.appendChild(vwbcRework); 
-
+    progress.appendChild(vwbcRework); 
 }
