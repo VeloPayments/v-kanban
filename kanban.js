@@ -431,4 +431,13 @@ function updateBoard() {
 
     //2020-08-11 - promote javaClientMITM to Done
     promote(javaClientMITM, releaseDemo1Progress, releaseDemo1Done);
+
+	//2020-08-13 - add vwbc library story.
+    var vwbcRework = createStory(
+        "Reworking the VWBC library",
+        "Lots of stuff has changed in the WASM and vcblockchain world since " +
+        " we wrote the original bindings, they needed rewriting and cleaning" +
+		" up. This is the main tracking task for this");        
+    releaseDemo1Progress.appendChild(vwbcRework); 
+
 }
