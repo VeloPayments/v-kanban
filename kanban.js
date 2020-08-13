@@ -182,8 +182,8 @@ function updateBoard() {
     //Create Demo 2 release.
     var releaseDemo2Selected = createRelease("0.4.1", "Demo 2");
     backlog.appendChild(releaseDemo2Selected);
-    var relaseDemo2Progress = createRelease("0.4.1", "Demo 2");
-    var relaseDemo2Done = createRelease("0.4.1", "Demo 2");
+    var releaseDemo2Progress = createRelease("0.4.1", "Demo 2");
+    var releaseDemo2Done = createRelease("0.4.1", "Demo 2");
 
     //Stories for Demo 2
     promote(vcblockchainProtocol, backlog, releaseDemo2Selected);
@@ -439,4 +439,15 @@ function updateBoard() {
         " we wrote the original bindings, they needed rewriting and cleaning" +
 		" up. This is the main tracking task for this");        
     progress.appendChild(vwbcRework); 
+
+    //2020-08-13 - add Demo 3 release.
+    var releaseDemo3Selected = createRelease("0.4.4", "Demo 3");
+    backlog.appendChild(releaseDemo3Selected);
+    var releaseDemo3Progress = createRelease("0.4.4", "Demo 3");
+    var releaseDemo3Done = createRelease("0.4.4", "Demo 3");
+
+    //2020-08-13 - promote vwbcRework to releaseDemo3Progress.
+    progress.appendChild(releaseDemo3Progress);
+    done.appendChild(releaseDemo3Done);
+    promote(vwbcRework, progress, releaseDemo3Progress);
 }
