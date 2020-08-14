@@ -450,4 +450,8 @@ function updateBoard() {
     progress.appendChild(releaseDemo3Progress);
     done.appendChild(releaseDemo3Done);
     promote(vwbcRework, progress, releaseDemo3Progress);
+
+    //2020-08-14 - promote vcblockchainProtocol to in-progress.
+    progress.insertBefore(releaseDemo2Progress, releaseDemo3Progress);
+    promote(vcblockchainProtocol, releaseDemo2Selected, releaseDemo2Progress);
 }
