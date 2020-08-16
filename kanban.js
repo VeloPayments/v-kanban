@@ -454,4 +454,12 @@ function updateBoard() {
     //2020-08-14 - promote vcblockchainProtocol to in-progress.
     progress.insertBefore(releaseDemo2Progress, releaseDemo3Progress);
     promote(vcblockchainProtocol, releaseDemo2Selected, releaseDemo2Progress);
+
+    //2020-08-15 - add story to cover http(s) proxy.
+    var httpProtocolProxy = createStory(
+        "HTTP(s) proxy for protocol",
+        "This proxy allows wasm / JS web applications to connect to agentd " +
+        "via a websockets connection.  This story is a placeholder and will " +
+        "be expanded with smaller stories closer to planning.");
+    releaseDemo3Selected.appendChild(httpProtocolProxy);
 }
