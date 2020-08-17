@@ -462,4 +462,10 @@ function updateBoard() {
         "via a websockets connection.  This story is a placeholder and will " +
         "be expanded with smaller stories closer to planning.");
     releaseDemo3Selected.appendChild(httpProtocolProxy);
+
+    //2020-08-16 - add VPR model check release
+    var vprModelCheckReleaseSelected = createRelease("0.4.x", "VPR Model Check");
+    backlog.appendChild(vprModelCheckReleaseSelected);
+    var vprModelCheckReleaseProgress = createRelease("0.4.x", "VPR Model Check");
+    var vprModelCheckReleaseDone = createRelease("0.4.x", "VPR Model Check");
 }
