@@ -468,4 +468,7 @@ function updateBoard() {
     backlog.appendChild(vprModelCheckReleaseSelected);
     var vprModelCheckReleaseProgress = createRelease("0.4.x", "VPR Model Check");
     var vprModelCheckReleaseDone = createRelease("0.4.x", "VPR Model Check");
+
+    //2020-08-17 - promote demo1Versioning to done.
+    promote(demo1Versioning, releaseDemo1Progress, releaseDemo1Done);
 }
