@@ -471,4 +471,50 @@ function updateBoard() {
 
     //2020-08-17 - promote demo1Versioning to done.
     promote(demo1Versioning, releaseDemo1Progress, releaseDemo1Done);
+
+    //2020-08-18 - create stories for VPR model check release
+    var vprModelCheckDisposable = createStory(
+        "VPR Model checks for disposable",
+        "Create / update model checks.");
+    vprModelCheckReleaseSelected.appendChild(vprModelCheckDisposable);
+    var vprModelCheckMallocAllocator = createStory(
+        "VPR Model checks for malloc allocator",
+        "Create / update model checks.");
+    vprModelCheckReleaseSelected.appendChild(vprModelCheckMallocAllocator);
+    var vprModelCheckDynamicArray = createStory(
+        "VPR Model checks for dynamic array",
+        "Create / update model checks.");
+    vprModelCheckReleaseSelected.appendChild(vprModelCheckDynamicArray);
+    var vprModelCheckBumpAllocator = createStory(
+        "VPR Model checks for bump allocator",
+        "Create / update model checks.");
+    vprModelCheckReleaseSelected.appendChild(vprModelCheckBumpAllocator);
+    var vprModelCheckHashMap = createStory(
+        "VPR Model checks for hashmap",
+        "Create / update model checks.");
+    vprModelCheckReleaseSelected.appendChild(vprModelCheckHashMap);
+    var vprModelCheckLinkedList = createStory(
+        "VPR Model checks for linked list",
+        "Create / update model checks.");
+    vprModelCheckReleaseSelected.appendChild(vprModelCheckLinkedList);
+    var vprModelCheckDoubleLinkedList = createStory(
+        "VPR Model checks for double linked list",
+        "Create / update model checks.");
+    vprModelCheckReleaseSelected.appendChild(vprModelCheckDoubleLinkedList);
+    var vprModelCheckAbstractFactory = createStory(
+        "VPR Model checks for abstract factory",
+        "Create / update model checks.");
+    vprModelCheckReleaseSelected.appendChild(vprModelCheckAbstractFactory);
+    var vprModelCheckBloomFilter = createStory(
+        "VPR Model checks for bloom filter",
+        "Create / update model checks.");
+    vprModelCheckReleaseSelected.appendChild(vprModelCheckBloomFilter);
+    var vprModelCheckCompare = createStory(
+        "VPR Model checks for compare",
+        "Create / update model checks.");
+    vprModelCheckReleaseSelected.appendChild(vprModelCheckCompare);
+    var vprModelCheckUUID = createStory(
+        "VPR Model checks for uuid",
+        "Create / update model checks.");
+    vprModelCheckReleaseSelected.appendChild(vprModelCheckUUID);
 }
