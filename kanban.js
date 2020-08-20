@@ -84,11 +84,11 @@ function updateBoard() {
             "canonization service.");
     backlog.appendChild(canonizationBlockSigning);
 
-    var vcblockchainProtocol =
+    var vcblockchainProtocolHandshakeRequest =
         createStory(
-            "Add protocol support to vcblockchain",
-            "Allow both Java and C clients to use a shared protocol API.");
-    backlog.appendChild(vcblockchainProtocol);
+            "Add handshake protocol request to vcblockchain",
+            "Add handshake request to the vcblockchain protocol lib.");
+    backlog.appendChild(vcblockchainProtocolHandshakeRequest);
 
     var forwardSecrecy =
         createStory(
@@ -186,7 +186,8 @@ function updateBoard() {
     var releaseDemo2Done = createRelease("0.4.1", "Demo 2");
 
     //Stories for Demo 2
-    promote(vcblockchainProtocol, backlog, releaseDemo2Selected);
+    promote(
+        vcblockchainProtocolHandshakeRequest, backlog, releaseDemo2Selected);
     promote(forwardSecrecy, backlog, releaseDemo2Selected);
     promote(notificationServiceShell, backlog, releaseDemo2Selected);
     promote(
@@ -451,9 +452,11 @@ function updateBoard() {
     done.appendChild(releaseDemo3Done);
     promote(vwbcRework, progress, releaseDemo3Progress);
 
-    //2020-08-14 - promote vcblockchainProtocol to in-progress.
+    //2020-08-14 - promote vcblockchainProtocolHandshakeRequest to in-progress.
     progress.insertBefore(releaseDemo2Progress, releaseDemo3Progress);
-    promote(vcblockchainProtocol, releaseDemo2Selected, releaseDemo2Progress);
+    promote(
+        vcblockchainProtocolHandshakeRequest, releaseDemo2Selected,
+        releaseDemo2Progress);
 
     //2020-08-15 - add story to cover http(s) proxy.
     var httpProtocolProxy = createStory(
@@ -517,4 +520,81 @@ function updateBoard() {
         "VPR Model checks for uuid",
         "Create / update model checks.");
     vprModelCheckReleaseSelected.appendChild(vprModelCheckUUID);
+
+    //2020-08-19 - split up protocol story.
+    var vcblockchainProtocolHandshakeAck =
+        createStory(
+            "Add handshake ack to vcblockchain",
+            "Add handshake ack to the vcblockchain protocol lib.");
+    releaseDemo2Selected.appendChild(vcblockchainProtocolHandshakeAck);
+    var vcblockchainProtocolLatestBlockID =
+        createStory(
+            "Add get latest block id to vcblockchain",
+            "Add get latest block id to the vcblockchain protocol lib.");
+    releaseDemo2Selected.appendChild(vcblockchainProtocolLatestBlockID);
+    var vcblockchainProtocolBlockIDByHeight =
+        createStory(
+            "Add get block id by height to vcblockchain",
+            "Add get block id by height to the vcblockchain protocol lib.");
+    releaseDemo2Selected.appendChild(vcblockchainProtocolBlockIDByHeight);
+    var vcblockchainProtocolClose =
+        createStory(
+            "Add close request to vcblockchain",
+            "Add close request to the vcblockchain protocol lib.");
+    releaseDemo2Selected.appendChild(vcblockchainProtocolClose);
+    var vcblockchainProtocolTransactionSubmit =
+        createStory(
+            "Add transaction submit to vcblockchain",
+            "Add transaction submit to the vcblockchain protocol lib.");
+    releaseDemo2Selected.appendChild(vcblockchainProtocolTransactionSubmit);
+    var vcblockchainProtocolBlockGet =
+        createStory(
+            "Add block get to vcblockchain",
+            "Add block get to the vcblockchain protocol lib.");
+    releaseDemo2Selected.appendChild(vcblockchainProtocolBlockGet);
+    var vcblockchainProtocolBlockGetNextId =
+        createStory(
+            "Add block get next id to vcblockchain",
+            "Add block get next id to the vcblockchain protocol lib.");
+    releaseDemo2Selected.appendChild(vcblockchainProtocolBlockGetNextId);
+    var vcblockchainProtocolBlockGetPrevId =
+        createStory(
+            "Add block get prev id to vcblockchain",
+            "Add block get prev id to the vcblockchain protocol lib.");
+    releaseDemo2Selected.appendChild(vcblockchainProtocolBlockGetPrevId);
+    var vcblockchainProtocolTransactionGet =
+        createStory(
+            "Add transaction get to vcblockchain",
+            "Add transaction get to the vcblockchain protocol lib.");
+    releaseDemo2Selected.appendChild(vcblockchainProtocolTransactionGet);
+    var vcblockchainProtocolTransactionNextIDGet =
+        createStory(
+            "Add transaction get next id to vcblockchain",
+            "Add transaction get next id to the vcblockchain protocol lib.");
+    releaseDemo2Selected.appendChild(vcblockchainProtocolTransactionNextIDGet);
+    var vcblockchainProtocolTransactionPrevIDGet =
+        createStory(
+            "Add transaction get prev id to vcblockchain",
+            "Add transaction get prev id to the vcblockchain protocol lib.");
+    releaseDemo2Selected.appendChild(vcblockchainProtocolTransactionPrevIDGet);
+    var vcblockchainProtocolTransactionBlockIDGet =
+        createStory(
+            "Add transaction get block id to vcblockchain",
+            "Add transaction get block id to the vcblockchain protocol lib.");
+    releaseDemo2Selected.appendChild(vcblockchainProtocolTransactionBlockIDGet);
+    var vcblockchainProtocolArtifactFirstIDGet =
+        createStory(
+            "Add artifact first id get to vcblockchain",
+            "Add artifact first id get to the vcblockchain protocol lib.");
+    releaseDemo2Selected.appendChild(vcblockchainProtocolArtifactFirstIdGet);
+    var vcblockchainProtocolArtifactLastIDGet =
+        createStory(
+            "Add artifact last id get to vcblockchain",
+            "Add artifact last id get to the vcblockchain protocol lib.");
+    releaseDemo2Selected.appendChild(vcblockchainProtocolArtifactLastIdGet);
+    var vcblockchainProtocolStatusGet =
+        createStory(
+            "Add status get to vcblockchain",
+            "Add status get the vcblockchain protocol lib.");
+    releaseDemo2Selected.appendChild(vcblockchainProtocolStatusGet);
 }
