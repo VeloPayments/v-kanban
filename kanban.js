@@ -611,4 +611,12 @@ function updateBoard() {
             "The parser needs to be formally proven to always work with " +
             "these variable length field size.");
     backlog.appendChild(certUnlimitedPayload);
+
+    //2020-08-21 - add code coverage cleanup task for ssock.
+    var ssockCodeCoverage =
+        createStory(
+            "Increase branch coverage for vcblockchain ssock library",
+            "Currently, there are not tests exercising all possible socket " +
+            "error conditions in the read/write primitive I/O functions.");
+    releaseDemo2Selected.appendChild(ssockCodeCoverage);
 }
