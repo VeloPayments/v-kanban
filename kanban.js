@@ -586,15 +586,29 @@ function updateBoard() {
         createStory(
             "Add artifact first id get to vcblockchain",
             "Add artifact first id get to the vcblockchain protocol lib.");
-    releaseDemo2Selected.appendChild(vcblockchainProtocolArtifactFirstIdGet);
+    releaseDemo2Selected.appendChild(vcblockchainProtocolArtifactFirstIDGet);
     var vcblockchainProtocolArtifactLastIDGet =
         createStory(
             "Add artifact last id get to vcblockchain",
             "Add artifact last id get to the vcblockchain protocol lib.");
-    releaseDemo2Selected.appendChild(vcblockchainProtocolArtifactLastIdGet);
+    releaseDemo2Selected.appendChild(vcblockchainProtocolArtifactLastIDGet);
     var vcblockchainProtocolStatusGet =
         createStory(
             "Add status get to vcblockchain",
             "Add status get the vcblockchain protocol lib.");
     releaseDemo2Selected.appendChild(vcblockchainProtocolStatusGet);
+
+    //2020-08-20 - add 32k limit and unlimited stories.
+    var cert32k =
+        createStory(
+            "Limit field payload sizes to 32k (reserve high bit)",
+            "The reserved high bit ensures forward compatibility with " +
+            "ulimitied payload sizes.");
+    backlog.appendChild(cert32k);
+    var certUnlimitedPayload =
+        createStory(
+            "Make the field size variable length for unlimited payload size",
+            "The parser needs to be formally proven to always work with " +
+            "these variable length field size.");
+    backlog.appendChild(certUnlimitedPayload);
 }
