@@ -629,4 +629,8 @@ function updateBoard() {
             "value encoded in the certificate.");
     releaseDemo2Progress.insertBefore(
         suiteID, vcblockchainProtocolHandshakeRequest);
+    //Sort the "done" columns to make it more apparent what is being done now.
+    done.insertBefore(releaseDemo2Done, createKanban);
+    done.insertBefore(releaseDemo3Done, createKanban);
+    done.insertBefore(releaseDemo1Done, createKanban);
 }
