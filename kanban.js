@@ -633,4 +633,6 @@ function updateBoard() {
     done.insertBefore(releaseDemo2Done, createKanban);
     done.insertBefore(releaseDemo3Done, createKanban);
     done.insertBefore(releaseDemo1Done, createKanban);
+    //complete suiteID story.
+    promote(suiteID, releaseDemo2Progress, releaseDemo2Done);
 }
