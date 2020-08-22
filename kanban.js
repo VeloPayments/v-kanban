@@ -619,4 +619,14 @@ function updateBoard() {
             "Currently, there are not tests exercising all possible socket " +
             "error conditions in the read/write primitive I/O functions.");
     releaseDemo2Selected.appendChild(ssockCodeCoverage);
+
+    //2020-08-22 - add suite id story.
+    var suiteID =
+        createStory(
+            "Add crypto suite ID to the crypto suite structure",
+            "For introspection purposes, the crypto suite ID should be " +
+            "included in the crypto suite structure. This should match the " +
+            "value encoded in the certificate.");
+    releaseDemo2Progress.insertBefore(
+        suiteID, vcblockchainProtocolHandshakeRequest);
 }
