@@ -635,4 +635,12 @@ function updateBoard() {
     done.insertBefore(releaseDemo1Done, createKanban);
     //complete suiteID story.
     promote(suiteID, releaseDemo2Progress, releaseDemo2Done);
+
+    //2020-08-23 - add story for console logger
+    var consoleLogger =
+        createStory(
+            "Add console logger for debugging.",
+            "When agentd is in console mode, the logger should write to " +
+            "the console, which should be piped to the supervisor.");
+    releaseMaintenance1Selected.appendChild(consoleLogger);
 }
