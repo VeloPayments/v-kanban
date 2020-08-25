@@ -32,6 +32,30 @@ function promote(item, prev, next) {
     next.appendChild(item);
 }
 
+function prioritize(queue, item, placeAbove) {
+    queue.insertBefore(item, placeAbove);
+}
+
+function createDivider() {
+    var divider = document.createElement("div");
+
+    var para1 = document.createElement("p");
+    var hr1 = document.createElement("hr");
+    var para2 = document.createElement("p");
+    var hr2 = document.createElement("hr");
+    var para3 = document.createElement("p");
+    var hr3 = document.createElement("hr");
+
+    divider.appendChild(para1);
+    divider.appendChild(hr1);
+    divider.appendChild(para2);
+    divider.appendChild(hr2);
+    divider.appendChild(para3);
+    divider.appendChild(hr3);
+
+    return divider;
+}
+
 function updateBoard() {
     var backlog = document.getElementById("backlog");
     var selected = document.getElementById("selected");
@@ -675,4 +699,24 @@ function updateBoard() {
             "vjblockchain should be crypto suite agnostic",
             "vjblockchain should work with any vccrypt suite.");
     backlog.appendChild(vjblockchainSuiteAgnostic);
+
+    //2020-08-25 - prioritize some stories in the queue for visualization
+    prioritize(
+        releaseDemo2Selected, vcblockchainProtocolHandshakeAck, forwardSecrecy);
+    prioritize(
+        releaseDemo2Selected, vcblockchainProtocolLatestBlockID,
+        forwardSecrecy);
+    prioritize(
+        releaseDemo2Selected, vcblockchainProtocolTransactionSubmit,
+        forwardSecrecy);
+    prioritize(
+        releaseDemo2Selected, vcblockchainProtocolBlockGet, forwardSecrecy);
+    prioritize(
+        releaseDemo2Selected, vcblockchainProtocolBlockGetNextId,
+        forwardSecrecy);
+    prioritize(
+        releaseDemo2Selected, demo2client, forwardSecrecy);
+    var release2DemoDivider = createDivider();
+    prioritize(
+        releaseDemo2Selected, release2DemoDivider, forwardSecrecy);
 }
