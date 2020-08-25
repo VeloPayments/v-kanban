@@ -719,4 +719,12 @@ function updateBoard() {
     var release2DemoDivider = createDivider();
     prioritize(
         releaseDemo2Selected, release2DemoDivider, forwardSecrecy);
+
+    //2020-08-25 - add vccrypt_buffer_move
+    var vccryptBufferMove =
+        createStory(
+            "vccrypt_buffer_move",
+            "This function adds move semantics to the vccrypt buffer.");
+    releaseDemo2Progress.insertBefore(
+        vccryptBufferMove, vcblockchainProtocolHandshakeRequest);
 }
