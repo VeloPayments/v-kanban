@@ -643,4 +643,36 @@ function updateBoard() {
             "When agentd is in console mode, the logger should write to " +
             "the console, which should be piped to the supervisor.");
     releaseMaintenance1Selected.appendChild(consoleLogger);
+
+    //2020-08-24 - add stories for making libraries and utils suite agnostic.
+    var vccertSuiteAgonstic =
+        createStory(
+            "vccert should be crypto suite agnostic",
+            "vccert should work for any vccrypt suite.");
+    backlog.appendChild(vccertSuiteAgonstic);
+    var vcblockchainSuiteAgnostic =
+        createStory(
+            "vcblockchain should be crypto suite agnostic",
+            "vcblockchain should work with any vccrypt suite.");
+    backlog.appendChild(vcblockchainSuiteAgnostic);
+    var vctoolSuiteAgnostic =
+        createStory(
+            "vctool should be crypto suite agnostic",
+            "vctool should work with any vccrypt suite.");
+    backlog.appendChild(vctoolSuiteAgnostic);
+    var agentdSuiteAgnostic =
+        createStory(
+            "agentd should be crypto suite agnostic",
+            "agentd should work with any vccrypt suite.");
+    backlog.appendChild(agentdSuiteAgnostic);
+    var vwblockchainSuiteAgnostic =
+        createStory(
+            "vwblockchain should be crypto suite agnostic",
+            "vwblockchain should work with any vccrypt suite.");
+    backlog.appendChild(vwblockchainSuiteAgnostic);
+    var vjblockchainSuiteAgnostic =
+        createStory(
+            "vjblockchain should be crypto suite agnostic",
+            "vjblockchain should work with any vccrypt suite.");
+    backlog.appendChild(vjblockchainSuiteAgnostic);
 }
