@@ -32,6 +32,11 @@ function promote(item, prev, next) {
     next.appendChild(item);
 }
 
+function promotepri(item, prev, next) {
+    prev.removeChild(item);
+    next.insertBefore(item, next.childNodes[1]);
+}
+
 function prioritize(queue, item, placeAbove) {
     queue.insertBefore(item, placeAbove);
 }
@@ -727,4 +732,7 @@ function updateBoard() {
             "This function adds move semantics to the vccrypt buffer.");
     releaseDemo2Progress.insertBefore(
         vccryptBufferMove, vcblockchainProtocolHandshakeRequest);
+
+    //2020-08-26 - finish vccrypt_buffer_move
+    promotepri(vccryptBufferMove, releaseDemo2Progress, releaseDemo2Done);
 }
