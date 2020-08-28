@@ -735,4 +735,12 @@ function updateBoard() {
 
     //2020-08-26 - finish vccrypt_buffer_move
     promotepri(vccryptBufferMove, releaseDemo2Progress, releaseDemo2Done);
+
+    //2020-08-27 - add story for hash_map refactor.
+    var hashMapRefactor =
+        createStory(
+            "Refactor VPR hash_map",
+            "Small changes needed to make it appropriate for the " +
+            "notification service.");
+    backlog.appendChild(hashMapRefactor);
 }
