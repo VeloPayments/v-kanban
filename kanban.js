@@ -761,4 +761,17 @@ function updateBoard() {
     releaseDemo2Selected.appendChild(ssockReadWriteAuthData);
     promotepri(
         ssockReadWriteAuthData, releaseDemo2Selected, releaseDemo2Progress);
+
+    //2020-09-02 - add story for test coverage in vcblockchain protocol
+    var unhappyPathProtocolTesting =
+        createStory(
+            "add unhappy path testing for vcblockchain protocol",
+            "skipped for fast demo turn-around.");
+    releaseDemo2Selected.appendChild(unhappyPathProtocolTesting);
+    //2020-09-02 - add story for address sanitizer cleanup in vccert
+    var vccertAddressSanitizer =
+        createStory(
+            "fix address sanitizer error in vccert tests",
+            "two tests aren't properly cleaning up memory afterward.");
+    releaseDemo2Selected.appendChild(vccertAddressSanitizer);
 }
