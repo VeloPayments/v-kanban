@@ -743,4 +743,13 @@ function updateBoard() {
             "Small changes needed to make it appropriate for the " +
             "notification service.");
     backlog.appendChild(hashMapRefactor);
+
+    //2020-09-01 - complete vcblockchainProtocolHandshakeRequest and start
+    //vcblockchainProtocolHandshakeAck
+    promotepri(
+        vcblockchainProtocolHandshakeRequest, releaseDemo2Progress,
+        releaseDemo2Done);
+    promotepri(
+        vcblockchainProtocolHandshakeAck, releaseDemo2Selected,
+        releaseDemo2Progress);
 }
