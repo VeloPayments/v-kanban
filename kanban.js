@@ -752,4 +752,13 @@ function updateBoard() {
     promotepri(
         vcblockchainProtocolHandshakeAck, releaseDemo2Selected,
         releaseDemo2Progress);
+
+    //2020-09-02 - add ssockReadWriteAuthData story and start progress.
+    var ssockReadWriteAuthData =
+        createStory(
+            "ssock read/write authed data",
+            "Add ssock methods for reading / writing authenticated data.");
+    releaseDemo2Selected.appendChild(ssockReadWriteAuthData);
+    promotepri(
+        ssockReadWriteAuthData, releaseDemo2Selected, releaseDemo2Progress);
 }
