@@ -774,4 +774,11 @@ function updateBoard() {
             "fix address sanitizer error in vccert tests",
             "two tests aren't properly cleaning up memory afterward.");
     releaseDemo2Selected.appendChild(vccertAddressSanitizer);
+
+    //2020-09-03 - add story for Cortex-M bring-up.
+    var cortexMPort =
+        createStory(
+            "Port Demo2 to custom CortexM demo board",
+            "ESP8266 wifi module to communicate with blockchain agent.");
+    backlog.appendChild(cortexMPort);
 }
