@@ -785,4 +785,11 @@ function updateBoard() {
     //2020-09-04 - promote ssock story to done.
     promotepri(
         ssockReadWriteAuthData, releaseDemo2Progress, releaseDemo2Done);
+
+    //2020-09-05 - add story to investigate IV serialization
+    var ivSerialization =
+        createStory(
+            "Investigate IV serialization in protocol",
+            "Verify that the protocol is treating the IV as big-endian.");
+    releaseDemo2Selected.appendChild(ivSerialization);
 }
