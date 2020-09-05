@@ -781,4 +781,8 @@ function updateBoard() {
             "Port Demo2 to custom CortexM demo board",
             "ESP8266 wifi module to communicate with blockchain agent.");
     backlog.appendChild(cortexMPort);
+
+    //2020-09-04 - promote ssock story to done.
+    promotepri(
+        ssockReadWriteAuthData, releaseDemo2Progress, releaseDemo2Done);
 }
