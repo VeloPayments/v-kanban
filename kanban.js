@@ -792,4 +792,11 @@ function updateBoard() {
             "Investigate IV serialization in protocol",
             "Verify that the protocol is treating the IV as big-endian.");
     releaseDemo2Selected.appendChild(ivSerialization);
+
+    //2020-09-06 - add story to increase branch coverage for protocol library.
+    var protocolBranchCoverage =
+        createStory(
+            "Increase branch coverage for protocol library",
+            "Currently, implemented protocol methods have happy path testing.");
+    releaseDemo2Selected.appendChild(protocolBranchCoverage);
 }
