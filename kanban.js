@@ -799,4 +799,11 @@ function updateBoard() {
             "Increase branch coverage for protocol library",
             "Currently, implemented protocol methods have happy path testing.");
     releaseDemo2Selected.appendChild(protocolBranchCoverage);
+
+    //2020-09-07 - add story to investigate encryption at rest.
+    var encryptionAtRest =
+        createStory(
+            "Investigate data service encryption at rest",
+            "Possible tie-in with auth service for key management.");
+    backlog.appendChild(encryptionAtRest);
 }
