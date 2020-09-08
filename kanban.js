@@ -806,4 +806,28 @@ function updateBoard() {
             "Investigate data service encryption at rest",
             "Possible tie-in with auth service for key management.");
     backlog.appendChild(encryptionAtRest);
+
+    //2020-09-08 - more stories.
+    var constSecret =
+        createStory(
+            "Make secret const in ssock.h",
+            "This will require making changes to the vccrypt API.");
+    releaseDemo2Selected.appendChild(constSecret);
+    var vctoolPrivateKeyStartup =
+        createStory(
+            "vctool option to bootstrap agentd with an encrypted private key",
+            "This story handles the vctool portion of this change; vctool " +
+            "decrypts a private key and passes this to agentd.");
+    backlog.appendChild(vctoolPrivateKeyStartup);
+    var agentdStartupWithVCTool =
+        createStory(
+            "agentd can be started from agentd with private key passthrough",
+            "On startup, an option allows a private key to be read from " +
+            "the caller, i.e. vctool.");
+    backlog.appendChild(agentdStartupWithVCTool);
+    var agentdSupervisorStability =
+        createStory(
+            "Harden the supervisor process so it always restarts agentd",
+            "Currently, there are some edge cases where the supervisor stops.");
+    backlog.appendChild(agentdSupervisorStability);
 }
