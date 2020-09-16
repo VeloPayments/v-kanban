@@ -830,4 +830,18 @@ function updateBoard() {
             "Harden the supervisor process so it always restarts agentd",
             "Currently, there are some edge cases where the supervisor stops.");
     backlog.appendChild(agentdSupervisorStability);
+
+    //2020-09-15 - recvresp and decodeHeader stories.
+    var recvresp =
+        createStory(
+            "Add receive response method to blockchain protocol",
+            "A generic dispatch receive is more useful for async API work.");
+    releaseDemo2Selected.insertBefore(
+        recvresp, releaseDemo2Selected.childNodes[1]);
+    var decodeHeader =
+        createStory(
+            "Add response decode header method for response decoding",
+            "This method is used for client decode and dispatch.");
+    releaseDemo2Selected.appendChild(decodeHeader);
+    promotepri(decodeHeader, releaseDemo2Selected, releaseDemo2Progress);
 }
