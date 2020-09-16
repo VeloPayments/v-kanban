@@ -848,4 +848,7 @@ function updateBoard() {
     //2020-09-16 - decodeHeader completed; recvresp started
     promotepri(decodeHeader, releaseDemo2Progress, releaseDemo2Done);
     promotepri(recvresp, releaseDemo2Selected, releaseDemo2Progress);
+
+    //2020-09-16 - recvresp completed.
+    promotepri(recvresp, releaseDemo2Progress, releaseDemo2Done);
 }
