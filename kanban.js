@@ -844,4 +844,8 @@ function updateBoard() {
             "This method is used for client decode and dispatch.");
     releaseDemo2Selected.appendChild(decodeHeader);
     promotepri(decodeHeader, releaseDemo2Selected, releaseDemo2Progress);
+
+    //2020-09-16 - decodeHeader completed; recvresp started
+    promotepri(decodeHeader, releaseDemo2Progress, releaseDemo2Done);
+    promotepri(recvresp, releaseDemo2Selected, releaseDemo2Progress);
 }
