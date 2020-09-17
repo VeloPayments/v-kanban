@@ -851,4 +851,12 @@ function updateBoard() {
 
     //2020-09-16 - recvresp completed.
     promotepri(recvresp, releaseDemo2Progress, releaseDemo2Done);
+
+    //2020-09-17 - complete handshake ack and started get latest block id
+    promotepri(
+        vcblockchainProtocolHandshakeAck, releaseDemo2Progress,
+        releaseDemo2Done);
+    promotepri(
+        vcblockchainProtocolLatestBlockID, releaseDemo2Selected,
+        releaseDemo2Progress);
 }
