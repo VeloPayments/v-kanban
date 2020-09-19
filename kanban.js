@@ -859,4 +859,8 @@ function updateBoard() {
     promotepri(
         vcblockchainProtocolLatestBlockID, releaseDemo2Selected,
         releaseDemo2Progress);
+
+    //2020-09-18 - start progress on address sanitizer fix story.
+    promotepri(
+        vccertAddressSanitizer, releaseDemo2Selected, releaseDemo2Progress);
 }
