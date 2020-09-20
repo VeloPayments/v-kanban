@@ -863,4 +863,12 @@ function updateBoard() {
     //2020-09-18 - start progress on address sanitizer fix story.
     promotepri(
         vccertAddressSanitizer, releaseDemo2Selected, releaseDemo2Progress);
+
+    //2020-09-19 - create story to track crash condition in bloom filter with
+    //ASAN
+    var bloomFilterASANSegv =
+        createStory(
+            "Track down ASAN segfault in VPR bloom filter",
+            "It appears that a unit test is causing ASAN to segfault.");
+    releaseDemo2Selected.appendChild(bloomFilterASANSegv);
 }
