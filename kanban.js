@@ -871,4 +871,8 @@ function updateBoard() {
             "Track down ASAN segfault in VPR bloom filter",
             "It appears that a unit test is causing ASAN to segfault.");
     releaseDemo2Selected.appendChild(bloomFilterASANSegv);
+
+    //2020-09-19 - completed address sanitizer fix story.
+    promotepri(
+        vccertAddressSanitizer, releaseDemo2Progress, releaseDemo2Done);
 }
