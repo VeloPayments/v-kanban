@@ -875,4 +875,12 @@ function updateBoard() {
     //2020-09-19 - completed address sanitizer fix story.
     promotepri(
         vccertAddressSanitizer, releaseDemo2Progress, releaseDemo2Done);
+
+    //2020-09-21 - completed latest block id get; start transaction submit.
+    promotepri(
+        vcblockchainProtocolLatestBlockID, releaseDemo2Progress,
+        releaseDemo2Done);
+    promotepri(
+        vcblockchainProtocolTransactionSubmit, releaseDemo2Selected,
+        releaseDemo2Progress);
 }
