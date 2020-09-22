@@ -883,4 +883,13 @@ function updateBoard() {
     promotepri(
         vcblockchainProtocolTransactionSubmit, releaseDemo2Selected,
         releaseDemo2Progress);
+
+    //2020-09-21 - add story to fix the IV numbering.
+    var ivNumbering =
+        createStory(
+            "Fix IV numbering in vcblockchain to match protocol spec",
+            "Currently, both client and server IVs are set to 1, which is " +
+            "incorrect.");
+    releaseDemo2Selected.appendChild(ivNumbering);
+    prioritize(releaseDemo2Selected, ivNumbering, vcblockchainProtocolBlockGet);
 }
