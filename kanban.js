@@ -892,4 +892,11 @@ function updateBoard() {
             "incorrect.");
     releaseDemo2Selected.appendChild(ivNumbering);
     prioritize(releaseDemo2Selected, ivNumbering, vcblockchainProtocolBlockGet);
+
+    //2020-09-22 - complete transaction submit; start iv numbering.
+    promotepri(
+        vcblockchainProtocolTransactionSubmit, releaseDemo2Progress,
+        releaseDemo2Done);
+    promotepri(
+        ivNumbering, releaseDemo2Selected, releaseDemo2Progress);
 }
