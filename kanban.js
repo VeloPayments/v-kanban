@@ -899,4 +899,11 @@ function updateBoard() {
         releaseDemo2Done);
     promotepri(
         ivNumbering, releaseDemo2Selected, releaseDemo2Progress);
+
+    //2020-09-22 - complete iv numbering; start block get
+    promotepri(
+        ivNumbering, releaseDemo2Progress, releaseDemo2Done);
+    promotepri(
+        vcblockchainProtocolBlockGet, releaseDemo2Selected,
+        releaseDemo2Progress);
 }
