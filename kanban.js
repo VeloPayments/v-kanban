@@ -919,4 +919,11 @@ function updateBoard() {
     //2020-09-22 - complete byteswap story.
     promotepri(
         vcblockchainByteswap, releaseDemo2Progress, releaseDemo2Done);
+
+    //2020-09-22 - complete block get; start block get next id.
+    promotepri(
+        vcblockchainProtocolBlockGet, releaseDemo2Progress, releaseDemo2Done);
+    promotepri(
+        vcblockchainProtocolBlockGetNextId, releaseDemo2Selected,
+        releaseDemo2Progress);
 }
