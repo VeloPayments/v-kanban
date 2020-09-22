@@ -915,4 +915,8 @@ function updateBoard() {
     releaseDemo2Selected.appendChild(vcblockchainByteswap);
     promotepri(
         vcblockchainByteswap, releaseDemo2Selected, releaseDemo2Progress);
+
+    //2020-09-22 - complete byteswap story.
+    promotepri(
+        vcblockchainByteswap, releaseDemo2Progress, releaseDemo2Done);
 }
