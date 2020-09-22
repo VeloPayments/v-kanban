@@ -906,4 +906,13 @@ function updateBoard() {
     promotepri(
         vcblockchainProtocolBlockGet, releaseDemo2Selected,
         releaseDemo2Progress);
+
+    //2020-09-22 - create and start story for fixing byteswap in vcblockchain
+    var vcblockchainByteswap =
+        createStory(
+            "Fix byteswap naming in vcblockchain",
+            "Current names conflict with Linux libc.");
+    releaseDemo2Selected.appendChild(vcblockchainByteswap);
+    promotepri(
+        vcblockchainByteswap, releaseDemo2Selected, releaseDemo2Progress);
 }
