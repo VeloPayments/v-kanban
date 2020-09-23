@@ -926,4 +926,10 @@ function updateBoard() {
     promotepri(
         vcblockchainProtocolBlockGetNextId, releaseDemo2Selected,
         releaseDemo2Progress);
+
+    //2020-09-22 - complete block get next id; start demo 2 client.
+    promotepri(
+        vcblockchainProtocolBlockGetNextId, releaseDemo2Progress,
+        releaseDemo2Done);
+    promotepri(demo2client, releaseDemo2Selected, releaseDemo2Progress);
 }
