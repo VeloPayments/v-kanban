@@ -996,4 +996,10 @@ function updateBoard() {
     //2020-09-25 - start progress on javaFutureRemoval
     promotepri(
         javaFutureRemoval, releaseWhitsunSelected, releaseWhitsunProgress);
+
+    //2020-09-25 - completed javaFutureRemoval; started encryptedFieldMAC
+    promotepri(
+        javaFutureRemoval, releaseWhitsunProgress, releaseWhitsunDone);
+    promotepri(
+        encryptedFieldMAC, releaseWhitsunSelected, releaseWhitsunProgress);
 }
