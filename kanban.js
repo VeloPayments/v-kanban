@@ -932,4 +932,64 @@ function updateBoard() {
         vcblockchainProtocolBlockGetNextId, releaseDemo2Progress,
         releaseDemo2Done);
     promotepri(demo2client, releaseDemo2Selected, releaseDemo2Progress);
+
+    //2020-09-25 - create release codenamed Whitsun
+    var releaseWhitsunSelected = createRelease("0.4.3", "Whitsun");
+    selected.appendChild(releaseWhitsunSelected);
+    prioritize(selected, releaseWhitsunSelected, releaseDemo1Selected);
+    var releaseWhitsunProgress = createRelease("0.4.3", "Whitsun");
+    progress.appendChild(releaseWhitsunProgress);
+    prioritize(progress, releaseWhitsunProgress, releaseDemo1Progress);
+    var releaseWhitsunDone = createRelease("0.4.3", "Whitsun");
+    done.appendChild(releaseWhitsunDone);
+    prioritize(done, releaseWhitsunDone, releaseDemo2Done);
+
+    //2020-09-25 - create release codenamed Whitsun
+    var javaFutureRemoval =
+        createStory(
+            "Remove futures from Java API",
+            "Futures are just confusing Java developers. We will replace " +
+            "the synchronous API with an async one later.");
+    releaseWhitsunSelected.appendChild(javaFutureRemoval);
+    var encryptedFieldMAC =
+        createStory(
+            "Add MAC to encrypted fields",
+            "Add a message authentication code to encrypted cert fields.");
+    releaseWhitsunSelected.appendChild(encryptedFieldMAC);
+    var increasedDBSize =
+        createStory(
+            "Increase the default database size in agentd",
+            "This gives us breathing room for larger use cases.");
+    releaseWhitsunSelected.appendChild(increasedDBSize);
+    var simpleEncryptionAtRest =
+        createStory(
+            "Add encryption at rest to the data service",
+            "Use a configurable private key stored in a private cert.");
+    releaseWhitsunSelected.appendChild(simpleEncryptionAtRest);
+    var backupd =
+        createStory(
+            "Create backupd",
+            "This service continually updates an encrypted backup.");
+    releaseWhitsunSelected.appendChild(backupd);
+    var releaseWhitsunSelectedDivider = createDivider();
+    releaseWhitsunSelected.appendChild(releaseWhitsunSelectedDivider);
+    var adaptiveDBResizing =
+        createStory(
+            "Add code to adaptively resize the database",
+            "This will automatically grow databases.");
+    releaseWhitsunSelected.appendChild(adaptiveDBResizing);
+    var restoreAPI =
+        createStory(
+            "Create a restore API for agentd",
+            "agentd can be booted into a special mode that supports a " +
+            "restore.");
+    releaseWhitsunSelected.appendChild(restoreAPI);
+    var vctoolRestore =
+        createStory(
+            "Add support to vctool for restoring a backup",
+            "vctool can take a backup file and a private key to restore " +
+            "agentd");
+    releaseWhitsunSelected.appendChild(vctoolRestore);
+    //move the forward secrecy story to Whitsun
+    releaseWhitsunSelected.appendChild(forwardSecrecy);
 }
