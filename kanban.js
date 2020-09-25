@@ -992,4 +992,8 @@ function updateBoard() {
     releaseWhitsunSelected.appendChild(vctoolRestore);
     //move the forward secrecy story to Whitsun
     releaseWhitsunSelected.appendChild(forwardSecrecy);
+
+    //2020-09-25 - start progress on javaFutureRemoval
+    promotepri(
+        javaFutureRemoval, releaseWhitsunSelected, releaseWhitsunProgress);
 }
