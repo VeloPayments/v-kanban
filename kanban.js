@@ -1002,4 +1002,30 @@ function updateBoard() {
         javaFutureRemoval, releaseWhitsunProgress, releaseWhitsunDone);
     promotepri(
         encryptedFieldMAC, releaseWhitsunSelected, releaseWhitsunProgress);
+
+    //2020-09-25 - more cleanup stories
+    var monotonicOffset =
+        createStory(
+            "Monotonic offset and dead letter queue for protocol service",
+            "Offsets should increase in a monotonic way, and there should " +
+            "be dead letter handling.");
+    releaseWhitsunSelected.appendChild(monotonicOffset);
+    var ivRejection =
+        createStory(
+            "Large IV rejection",
+            "When the IV gets too large, the connection should be terminated");
+    releaseWhitsunSelected.appendChild(ivRejection);
+    var pqRejection =
+        createStory(
+            "Process queue rejection",
+            "Duplicate transaction ids on the process queue are rejected.");
+    releaseWhitsunSelected.appendChild(pqRejection);
+    var basicAttestation =
+        createStory(
+            "A basic attestation service",
+            "<ul><li>Process queue items are checked against DB " +
+                "constraints.</li>" +
+            "<li>Certs pass basic checks (e.g. next in line, signed).</li>" +
+            "</ul>");
+    releaseWhitsunSelected.appendChild(basicAttestation);
 }
