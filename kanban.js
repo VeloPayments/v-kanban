@@ -1028,4 +1028,8 @@ function updateBoard() {
             "<li>Certs pass basic checks (e.g. next in line, signed).</li>" +
             "</ul>");
     releaseWhitsunSelected.appendChild(basicAttestation);
+
+    //2020-09-26 - start progress on backupd
+    promotepri(
+        backupd, releaseWhitsunSelected, releaseWhitsunProgress);
 }
