@@ -1032,4 +1032,13 @@ function updateBoard() {
     //2020-09-26 - start progress on backupd
     promotepri(
         backupd, releaseWhitsunSelected, releaseWhitsunProgress);
+
+    //2020-09-28 - start progress on macos vjblockchain build
+    var vjblockchainMacOS =
+        createStory(
+            "Create MacOS build for vjblockchain",
+            "Set up automation to repeat this one-off build process.");
+    releaseWhitsunSelected.appendChild(vjblockchainMacOS);
+    promotepri(
+        vjblockchainMacOS, releaseWhitsunSelected, releaseWhitsunProgress);
 }
