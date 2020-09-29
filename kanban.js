@@ -1041,4 +1041,8 @@ function updateBoard() {
     releaseWhitsunSelected.appendChild(vjblockchainMacOS);
     promotepri(
         vjblockchainMacOS, releaseWhitsunSelected, releaseWhitsunProgress);
+
+    //2020-09-28 - complete vjblockchain build story.
+    promotepri(
+        vjblockchainMacOS, releaseWhitsunProgress, releaseWhitsunDone);
 }
