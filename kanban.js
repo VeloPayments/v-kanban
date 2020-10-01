@@ -1045,4 +1045,29 @@ function updateBoard() {
     //2020-09-28 - complete vjblockchain build story.
     promotepri(
         vjblockchainMacOS, releaseWhitsunProgress, releaseWhitsunDone);
+
+    //2020-09-30 - add story to cover refactor of random service and cprng
+    var randomServiceRefactor =
+        createStory(
+            "Refactor the random service to handle multiple connections.",
+            "Originally, the randomservice was meant to be unique per " +
+            "service requiring access to the system cprng. However, with " +
+            "encryption at rest, each data service instance will need access " +
+            "to an entropy source. As such, it's better to have a single " +
+            "random service.");
+    releaseWhitsunSelected.appendChild(randomServiceRefactor);
+    prioritize(
+        releaseWhitsunSelected, randomServiceRefactor, simpleEncryptionAtRest);
+    var fortunacprng =
+        createStory(
+            "AES2X256 implementation of Fortuna",
+            "The data service will need to create cryptographically random " +
+            "data at a rate that is potentially faster than it can receive " +
+            "entropy from the system source. A local Fortuna implementation " +
+            "will ensure that it can produce good cryptographically random " +
+            "initialization vector values while being periodically reseeded " +
+            "by the random service.");
+    releaseWhitsunSelected.appendChild(fortunacprng);
+    prioritize(
+        releaseWhitsunSelected, fortunacprng, simpleEncryptionAtRest);
 }
