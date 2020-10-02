@@ -1070,4 +1070,10 @@ function updateBoard() {
     releaseWhitsunSelected.appendChild(fortunacprng);
     prioritize(
         releaseWhitsunSelected, fortunacprng, simpleEncryptionAtRest);
+
+    //2020-10-01 - start progress on ASAN segfault story.
+    promotepri(
+        bloomFilterASANSegv, releaseDemo2Selected, releaseWhitsunSelected);
+    promotepri(
+        bloomFilterASANSegv, releaseWhitsunSelected, releaseWhitsunProgress);
 }
