@@ -1076,4 +1076,7 @@ function updateBoard() {
         bloomFilterASANSegv, releaseDemo2Selected, releaseWhitsunSelected);
     promotepri(
         bloomFilterASANSegv, releaseWhitsunSelected, releaseWhitsunProgress);
+
+    //2020-10-04 - complete ASAN segfault story.
+    promotepri(bloomFilterASANSegv, releaseWhitsunProgress, releaseWhitsunDone);
 }
