@@ -1082,4 +1082,7 @@ function updateBoard() {
 
     //2020-10-05 - start progress on database size story.
     promotepri(increasedDBSize, releaseWhitsunSelected, releaseWhitsunProgress);
+
+    //2020-10-06 - complete the database size story.
+    promotepri(increasedDBSize, releaseWhitsunProgress, releaseWhitsunDone);
 }
