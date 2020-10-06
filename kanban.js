@@ -1079,4 +1079,7 @@ function updateBoard() {
 
     //2020-10-04 - complete ASAN segfault story.
     promotepri(bloomFilterASANSegv, releaseWhitsunProgress, releaseWhitsunDone);
+
+    //2020-10-05 - start progress on database size story.
+    promotepri(increasedDBSize, releaseWhitsunSelected, releaseWhitsunProgress);
 }
