@@ -1094,4 +1094,7 @@ function updateBoard() {
             "data.");
     releaseWhitsunSelected.appendChild(blockPadding);
     promotepri(blockPadding, releaseWhitsunSelected, releaseWhitsunProgress);
+
+    //2020-10-06 - complete padding story.
+    promotepri(blockPadding, releaseWhitsunProgress, releaseWhitsunDone);
 }
