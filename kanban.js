@@ -1085,4 +1085,13 @@ function updateBoard() {
 
     //2020-10-06 - complete the database size story.
     promotepri(increasedDBSize, releaseWhitsunProgress, releaseWhitsunDone);
+
+    //2020-10-06 - create and start progress on padding story.
+    var blockPadding =
+        createStory(
+            "PKCS#7 padding for block cipher plaintext",
+            "So we can use AES-2X-256-CBC for encrypting arbitrary length " +
+            "data.");
+    releaseWhitsunSelected.appendChild(blockPadding);
+    promotepri(blockPadding, releaseWhitsunSelected, releaseWhitsunProgress);
 }
