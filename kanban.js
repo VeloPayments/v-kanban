@@ -1097,4 +1097,12 @@ function updateBoard() {
 
     //2020-10-06 - complete padding story.
     promotepri(blockPadding, releaseWhitsunProgress, releaseWhitsunDone);
+
+    //2020-10-19 - create and start progress on crypto suite mock story.
+    var cryptoSuiteMock =
+        createStory(
+            "Create a mock crypto suite",
+            "This is needed for testing backupd and encryption at rest.");
+    releaseWhitsunSelected.appendChild(cryptoSuiteMock);
+    promotepri(cryptoSuiteMock, releaseWhitsunSelected, releaseWhitsunProgress);
 }
