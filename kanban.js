@@ -1105,4 +1105,14 @@ function updateBoard() {
             "This is needed for testing backupd and encryption at rest.");
     releaseWhitsunSelected.appendChild(cryptoSuiteMock);
     promotepri(cryptoSuiteMock, releaseWhitsunSelected, releaseWhitsunProgress);
+
+    //2020-10-25 - Refactor key_agreement to virtualize short-term secret func.
+    var shortTermSecretFunction =
+        createStory(
+            "Virtualize the short-term shared secret function",
+            "Its current implementation can't be easily mocked.");
+    releaseWhitsunSelected.appendChild(shortTermSecretFunction);
+    promotepri(
+        shortTermSecretFunction, releaseWhitsunSelected,
+        releaseWhitsunProgress);
 }
