@@ -1115,4 +1115,8 @@ function updateBoard() {
     promotepri(
         shortTermSecretFunction, releaseWhitsunSelected,
         releaseWhitsunProgress);
+
+    //2020-10-25 - complete virtualization story.
+    promotepri(
+        shortTermSecretFunction, releaseWhitsunProgress, releaseWhitsunDone);
 }
