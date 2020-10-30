@@ -1119,4 +1119,8 @@ function updateBoard() {
     //2020-10-25 - complete virtualization story.
     promotepri(
         shortTermSecretFunction, releaseWhitsunProgress, releaseWhitsunDone);
+
+    //2020-10-30 - complete crypto suite mock story.
+    promotepri(
+        cryptoSuiteMock, releaseWhitsunProgress, releaseWhitsunDone);
 }
