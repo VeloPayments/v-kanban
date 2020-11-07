@@ -1123,4 +1123,12 @@ function updateBoard() {
     //2020-10-30 - complete crypto suite mock story.
     promotepri(
         cryptoSuiteMock, releaseWhitsunProgress, releaseWhitsunDone);
+
+    //2020-11-07 - Create story to check for replay attack in protocol.
+    var protocolReplay =
+        createStory(
+            "Verify that our protocol packets can't be replayed",
+            "We increment the IV for each packet, but make sure this is tied " +
+            "into the HMAC somehow.");
+    releaseWhitsunSelected.appendChild(protocolReplay);
 }
