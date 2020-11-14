@@ -1139,4 +1139,12 @@ function updateBoard() {
 
     //2020-11-13 - Begin progress on VPR Disposable Model Check.
     promotepri(vprModelCheckDisposable, vprModelCheckReleaseSelected, vprModelCheckReleaseProgress);
+
+    //2020-11-14 - Complete VPR disposable model check and create story /
+    //start progress on VPR allocator model check.
+    promotepri(vprModelCheckDisposable, vprModelCheckReleaseProgress, vprModelCheckReleaseDone);
+    var vprModelCheckAllocator = createStory(
+        "VPR Model checks for allocator",
+        "Create / update model checks.");
+    vprModelCheckReleaseProgress.append(vprModelCheckAllocator);
 }
