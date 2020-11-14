@@ -1131,4 +1131,12 @@ function updateBoard() {
             "We increment the IV for each packet, but make sure this is tied " +
             "into the HMAC somehow.");
     releaseWhitsunSelected.appendChild(protocolReplay);
+
+    //2020-11-13 - Promote VPR release to board.
+    selected.append(vprModelCheckReleaseSelected);
+    progress.append(vprModelCheckReleaseProgress);
+    done.append(vprModelCheckReleaseDone);
+
+    //2020-11-13 - Begin progress on VPR Disposable Model Check.
+    promotepri(vprModelCheckDisposable, vprModelCheckReleaseSelected, vprModelCheckReleaseProgress);
 }
