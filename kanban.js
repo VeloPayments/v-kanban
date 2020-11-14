@@ -1147,4 +1147,9 @@ function updateBoard() {
         "VPR Model checks for allocator",
         "Create / update model checks.");
     vprModelCheckReleaseProgress.append(vprModelCheckAllocator);
+
+    //2020-11-14 - Complete VPR allocator model check and started
+    //VPR malloc_allocator model check story.
+    promotepri(vprModelCheckAllocator, vprModelCheckReleaseProgress, vprModelCheckReleaseDone);
+    promotepri(vprModelCheckMallocAllocator, vprModelCheckReleaseSelected, vprModelCheckReleaseProgress);
 }
