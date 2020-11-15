@@ -1152,4 +1152,9 @@ function updateBoard() {
     //VPR malloc_allocator model check story.
     promotepri(vprModelCheckAllocator, vprModelCheckReleaseProgress, vprModelCheckReleaseDone);
     promotepri(vprModelCheckMallocAllocator, vprModelCheckReleaseSelected, vprModelCheckReleaseProgress);
+
+    //2020-11-15 - Complete VPR malloc_allocator model check story and start
+    //VPR bump_allocator model check.
+    promotepri(vprModelCheckMallocAllocator, vprModelCheckReleaseProgress, vprModelCheckReleaseDone);
+    promotepri(vprModelCheckBumpAllocator, vprModelCheckReleaseSelected, vprModelCheckReleaseProgress);
 }
